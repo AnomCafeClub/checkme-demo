@@ -1,0 +1,135 @@
+.sketch{display:none}
+
+/* Direction 03: original ink diagrams within a strict monochrome system. */
+html[data-variant="mono"]{--wine:#111;--wine-dark:#050505;--cream:#f1f1f1;--paper:#fff;--ink:#111;--muted:#555;--line:#b6b6b6;--peach:#111;--pink:#ededed;--cedar:#fff;--cedar-ink:#111;--serif:'Space Grotesk',Arial,sans-serif;--sans:'Space Grotesk',Arial,sans-serif}
+html[data-variant="mono"] body{background:#fff;color:#111}
+html[data-variant="mono"] ::selection{background:#111;color:#fff}
+html[data-variant="mono"] img{filter:grayscale(1)!important}
+html[data-variant="mono"] .sketch{display:block}
+html[data-variant="mono"] .design-switcher{background:#fff;color:#111;border-bottom:1px solid #111}
+html[data-variant="mono"] .design-switcher a.selected{background:#111;color:#fff}
+html[data-variant="mono"] .preview-notice{background:#111;color:#fff}
+html[data-variant="mono"] .pulse-dot{background:#fff;box-shadow:0 0 0 4px #ffffff30}
+html[data-variant="mono"] .site-header{background:#fff;border-bottom:1px solid #111}
+html[data-variant="mono"] .brand,html[data-variant="mono"] .brand-period{color:#111}
+html[data-variant="mono"] .brand-mark i,html[data-variant="mono"] .brand-mark i:nth-child(2),html[data-variant="mono"] .brand-mark i:nth-child(3){background:#111}
+html[data-variant="mono"] .main-nav a:hover{color:#111}
+html[data-variant="mono"] .main-nav a:not(.nav-contact):after{background:#111}
+html[data-variant="mono"] .nav-contact{background:#111;color:#fff;border-color:#111}
+html[data-variant="mono"] .nav-contact:hover{background:#fff;color:#111}
+html[data-variant="mono"] .main-nav{gap:19px;font-size:10px}
+html[data-variant="mono"] .eyebrow{color:#111}
+html[data-variant="mono"] .eyebrow-line{background:#111}
+
+html[data-variant="mono"] .hero{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);min-height:720px;background:#080808;color:#fff}
+html[data-variant="mono"] .hero-copy{min-height:720px;padding:75px 5.5vw;align-items:center}
+html[data-variant="mono"] .hero-copy-inner{max-width:760px;min-width:0}
+html[data-variant="mono"] .hero .eyebrow{color:#fff}
+html[data-variant="mono"] .hero .eyebrow-line{background:#fff}
+html[data-variant="mono"] .hero h1{max-width:750px;color:#fff;font-family:'Manrope',Arial,sans-serif;text-transform:uppercase;font-weight:300;font-size:clamp(58px,5.6vw,101px);line-height:1.08;letter-spacing:-.055em;overflow-wrap:anywhere}
+html[data-variant="mono"] .hero-intro{color:#eee;max-width:520px;font-weight:400}
+html[data-variant="mono"] .hero-visual{position:relative;inset:auto;height:auto;min-height:720px;background:#d9d9d9;border-left:1px solid #fff}
+html[data-variant="mono"] .hero-visual img{object-position:69% center;filter:grayscale(1) contrast(1.05)!important}
+html[data-variant="mono"] .hero-visual:after{background:linear-gradient(0deg,#0008,transparent 55%)}
+html[data-variant="mono"] .hero-image-label{left:25px;right:auto;bottom:28px;background:#fff;border:1px solid #111;color:#111;backdrop-filter:none}
+html[data-variant="mono"] .hero-image-label .label-icon{color:#111}
+html[data-variant="mono"] .hero .btn-dark{background:#fff;border-color:#fff;color:#111}
+html[data-variant="mono"] .hero .btn-dark:hover{background:#d6d6d6;border-color:#d6d6d6;color:#111}
+html[data-variant="mono"] .hero .btn-outline{background:transparent;color:#fff;border-color:#fff}
+html[data-variant="mono"] .hero .btn-outline:hover{background:#fff;color:#111}
+html[data-variant="mono"] .hero-foot{color:#d0d0d0}
+html[data-variant="mono"] .hero-scroll-line{background:#fff}
+
+html[data-variant="mono"] .section-heading h2,html[data-variant="mono"] .manifesto h2,html[data-variant="mono"] .center-note h2,html[data-variant="mono"] .business-card h2,html[data-variant="mono"] .contact-info h2{color:#111}
+html[data-variant="mono"] .section-intro,html[data-variant="mono"] .step-card p,html[data-variant="mono"] .pillar p{color:#444}
+html[data-variant="mono"] .manifesto{background:#fff}
+html[data-variant="mono"] .manifesto:before{opacity:.07;background:repeating-radial-gradient(circle at center,transparent 0 14px,#111 15px 16px)}
+html[data-variant="mono"] .asterisk{color:#111}
+html[data-variant="mono"] .text-link{border-color:#111}
+html[data-variant="mono"] .section-steps{background:#ededed}
+html[data-variant="mono"] .steps-grid,html[data-variant="mono"] .step-card+.step-card{border-color:#111}
+html[data-variant="mono"] .step-card{position:relative;min-height:390px;padding-top:28px}
+html[data-variant="mono"] .step-number{font-size:12px;letter-spacing:.18em;color:#111}
+html[data-variant="mono"] .step-sketch{width:112px;height:112px;margin:24px 0 21px;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+html[data-variant="mono"] .step-card:hover .step-sketch{transform:translateY(-7px) rotate(-5deg)}
+html[data-variant="mono"] .step-rule{display:none}
+html[data-variant="mono"] .step-card h3{font-size:clamp(26px,2.5vw,37px)}
+html[data-variant="mono"] .section-offers{background:#fff}
+html[data-variant="mono"] .offer-grid{border-color:#111}
+html[data-variant="mono"] .offer-card,html[data-variant="mono"] .offer-card:nth-child(2),html[data-variant="mono"] .offer-card:nth-child(3){background:#fff;border-color:#111;min-height:560px}
+html[data-variant="mono"] .offer-card:hover{background:#111;color:#fff}
+html[data-variant="mono"] .offer-sketch{width:135px;height:135px;margin:22px auto 15px;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+html[data-variant="mono"] .offer-card:hover .offer-sketch{transform:rotate(-9deg) scale(1.08)}
+html[data-variant="mono"] .offer-tag{color:currentColor}
+html[data-variant="mono"] .image-statement{background:#111}
+html[data-variant="mono"] .image-statement img{filter:grayscale(1) contrast(1.08)!important}
+html[data-variant="mono"] .image-statement-copy .eyebrow{color:#fff}
+html[data-variant="mono"] .statement-rule{background:#fff}
+html[data-variant="mono"] .image-statement-copy>p:last-child{color:#ccc}
+html[data-variant="mono"] .section-faq{background:#ededed}
+html[data-variant="mono"] .faq-index{color:#111}
+html[data-variant="mono"] .closing{position:relative;overflow:hidden;background:#111;color:#fff}
+html[data-variant="mono"] .closing:after{content:'';position:absolute;right:-150px;top:-185px;width:530px;height:530px;border-radius:50%;opacity:.18;background:repeating-radial-gradient(circle,transparent 0 17px,#fff 18px 19px);pointer-events:none}
+html[data-variant="mono"] .closing-inner{position:relative;z-index:1}
+html[data-variant="mono"] .closing .eyebrow,html[data-variant="mono"] .closing h2{color:#fff}
+html[data-variant="mono"] .btn-dark{background:#111;color:#fff;border-color:#111}
+html[data-variant="mono"] .btn-dark:hover{background:#444;border-color:#444}
+html[data-variant="mono"] .btn-light{background:#fff;color:#111;border-color:#fff}
+html[data-variant="mono"] .btn-light:hover{background:#d7d7d7;border-color:#d7d7d7}
+html[data-variant="mono"] .footer{background:#080808;color:#fff}
+html[data-variant="mono"] .footer .brand,html[data-variant="mono"] .footer .brand-period{color:#fff}
+html[data-variant="mono"] .footer .brand-mark i,html[data-variant="mono"] .footer .brand-mark i:nth-child(2),html[data-variant="mono"] .footer .brand-mark i:nth-child(3){background:#fff}
+html[data-variant="mono"] .footer-top p,html[data-variant="mono"] .footer-bottom{color:#bbb}
+html[data-variant="mono"] .footer-links a:hover,html[data-variant="mono"] .footer-bottom a:hover{color:#fff;text-decoration:underline}
+html[data-variant="mono"] .footer-bottom{border-color:#666}
+html[data-variant="mono"] .page-hero{background:#ededed}
+html[data-variant="mono"] .page-hero h1{color:#111}
+html[data-variant="mono"] .page-hero-inner>img{filter:grayscale(1) contrast(1.1)!important}
+html[data-variant="mono"] .page-hero-star{color:#111}
+html[data-variant="mono"] .center-note h2 em{color:#111;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}
+html[data-variant="mono"] .pillar,html[data-variant="mono"] .business-card{background:#ededed;border:1px solid #111}
+html[data-variant="mono"] .pillar{min-height:390px}
+html[data-variant="mono"] .pillar>span:first-child{color:#111;font:700 12px 'Space Grotesk',sans-serif;letter-spacing:.15em}
+html[data-variant="mono"] .pillar-sketch{width:105px;height:105px;margin-top:10px;transition:transform .4s}
+html[data-variant="mono"] .pillar:hover .pillar-sketch{transform:rotate(8deg)}
+html[data-variant="mono"] .pillar h3{margin-top:18px}
+html[data-variant="mono"] .pillar-symbol{display:none}
+html[data-variant="mono"] .contact-symbol{color:#111}
+html[data-variant="mono"] .contact-line span{color:#555}
+html[data-variant="mono"] .founder-section{background:#fff;border-top:1px solid #111}
+html[data-variant="mono"] .founder-portrait img{filter:grayscale(1) contrast(1.08)}
+html[data-variant="mono"] .founder-copy>p:not(.eyebrow){color:#444}
+html[data-variant="mono"] .founder-copy .founder-intro{font-family:'Manrope',sans-serif;font-weight:400}
+html[data-variant="mono"] .founder-credentials{border-color:#111}
+html[data-variant="mono"] .founder-credentials span{border-color:#888}
+
+/* Light neo-grotesk headlines give the monochrome direction a calmer clinical tone. */
+html[data-variant="mono"] .section-heading h2,html[data-variant="mono"] .manifesto h2,html[data-variant="mono"] .closing h2,html[data-variant="mono"] .center-note h2,html[data-variant="mono"] .business-card h2,html[data-variant="mono"] .contact-info h2,html[data-variant="mono"] .page-hero h1,html[data-variant="mono"] .founder-copy h2,html[data-variant="mono"] .image-statement blockquote{font-family:'Manrope',Arial,sans-serif;font-weight:300;letter-spacing:-.055em;line-height:1.08}
+html[data-variant="mono"] .step-card h3,html[data-variant="mono"] .offer-card h3,html[data-variant="mono"] .pillar h3{font-family:'Manrope',Arial,sans-serif;font-weight:400;letter-spacing:-.055em;line-height:1.1}
+
+@media(max-width:900px){html[data-variant="mono"] .hero{grid-template-columns:minmax(0,1fr) minmax(0,.8fr)}html[data-variant="mono"] .hero h1{font-size:clamp(52px,6.3vw,76px)}}
+@media(min-width:761px) and (max-width:940px){
+  html[data-variant="mono"] .manifesto-grid,html[data-variant="mono"] .faq-layout{grid-template-columns:1fr;gap:38px}
+  html[data-variant="mono"] .manifesto h2{font-size:clamp(58px,7vw,84px);overflow-wrap:anywhere}
+  html[data-variant="mono"] .offer-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  html[data-variant="mono"] .offer-card h3{font-size:clamp(34px,4vw,48px);overflow-wrap:anywhere}
+}
+@media(max-width:760px){
+  html[data-variant="mono"] .design-switcher{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;padding:5px 8px}
+  html[data-variant="mono"] .design-switcher-label{grid-column:1/-1}
+  html[data-variant="mono"] .design-switcher a{padding:7px 3px;font-size:8px;text-align:center;white-space:nowrap}
+  html[data-variant="mono"] .main-nav{background:#fff}
+  html[data-variant="mono"] .menu-toggle span{background:#111}
+  html[data-variant="mono"] .hero{display:flex;flex-direction:column;min-height:0}
+  html[data-variant="mono"] .hero-copy{min-height:0;padding:72px 22px 55px}
+  html[data-variant="mono"] .hero h1{font-size:clamp(43px,10.7vw,72px);line-height:.95}
+  html[data-variant="mono"] .hero-visual{height:390px;min-height:0;border-left:0;border-top:1px solid #fff}
+  html[data-variant="mono"] .hero-image-label{left:16px;bottom:15px;padding:10px;font-size:8px}
+  html[data-variant="mono"] .step-card{min-height:0;padding:28px 0 36px}
+  html[data-variant="mono"] .step-sketch{margin:17px 0}
+  html[data-variant="mono"] .offer-card,html[data-variant="mono"] .offer-card:nth-child(2),html[data-variant="mono"] .offer-card:nth-child(3){min-height:480px}
+  html[data-variant="mono"] .pillar{min-height:0}
+  html[data-variant="mono"] .business-card{padding:38px 25px}
+  html[data-variant="mono"] .business-card h2{font-size:clamp(42px,10vw,58px);overflow-wrap:anywhere}
+  html[data-variant="mono"] .center-note h2{font-size:clamp(42px,10vw,60px);overflow-wrap:anywhere}
+}
