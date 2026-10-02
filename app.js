@@ -3,9 +3,8 @@ const e = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp
 const currentPath = (location.pathname.replace(/^\/checkme-demo/, '').replace(/\/$/, '') || '/');
 const siteHref = route => route.startsWith('/checkme-demo') ? route : '/checkme-demo' + route;
 const safeHref = href => /^\/[a-z0-9/-]*$/i.test(href) ? siteHref(href) : siteHref('/');
-const requestedDesign = new URLSearchParams(location.search).get('design');
-const design = ['alpine', 'mono'].includes(requestedDesign) ? requestedDesign : 'editorial';
-const designSwitcher = () => `<div class="design-switcher" aria-label="Comparer les trois directions visuelles"><span class="design-switcher-label">TROIS DIRECTIONS / MÊMES TEXTES</span><a href="${siteHref(currentPath)}?design=editorial" class="${design === 'editorial' ? 'selected' : ''}">01 — Éditorial</a><a href="${siteHref(currentPath)}?design=alpine" class="${design === 'alpine' ? 'selected' : ''}">02 — Altitude</a><a href="${siteHref(currentPath)}?design=mono" class="${design === 'mono' ? 'selected' : ''}">03 — Noir & blanc</a></div>`;
+const design = 'mono';
+const designSwitcher = () => '';
 let content;
 
 // Original precision diagrams for the monochrome direction.
@@ -30,7 +29,7 @@ const steps = c => `<section class="section section-steps"><div class="container
 const offerCards = c => `<section class="section section-offers"><div class="container">${heading(c.offers.eyebrow, c.offers.title, c.offers.intro)}<div class="offer-grid">${c.offers.items.map((o, i) => `<article class="offer-card reveal" style="--delay:${i * 100}ms"><div class="offer-top"><span>${e(o.number)} / 03</span><span class="offer-arrow">↗</span></div>${sketch(['heart', 'cells', 'compass'][i % 3], 'offer-sketch')}<div><p class="offer-tag">${e(o.tag)}</p><h3>${e(o.name)}</h3><p class="offer-description">${e(o.description)}</p></div><div class="offer-bottom"><span>${e(o.detail)}</span><span class="offer-plus">+</span></div></article>`).join('')}</div></div></section>`;
 const faqList = c => `<section class="section section-faq"><div class="container faq-layout">${heading(c.faq.eyebrow, c.faq.title)}<div class="faq-list">${c.faq.items.map((f, i) => `<details class="faq-item reveal" ${i === 0 ? 'open' : ''}><summary><span class="faq-index">0${i + 1}</span><span>${e(f.question)}</span><span class="faq-plus">+</span></summary><p>${e(f.answer)}</p></details>`).join('')}</div></div></section>`;
 const closing = c => `<section class="closing"><div class="container closing-inner"><div><p class="eyebrow">${e(c.home.closingEyebrow)}</p><h2>${e(c.home.closingTitle)}</h2></div>${button(c.home.closingCta, '/contact', 'light')}</div></section>`;
-const founderSection = (c, showLink = true) => `<section class="section founder-section"><div class="container founder-grid"><figure class="founder-portrait reveal"><img src="/checkme-demo/assets/guillaume-richalet.jpg" alt="Portrait du Dr Guillaume Richalet"><figcaption>${e(c.founder.portraitCredit)}</figcaption></figure><div class="founder-copy reveal"><p class="eyebrow"><span class="eyebrow-line"></span>${e(c.founder.eyebrow)}</p><h2>${e(c.founder.title)}</h2><p class="founder-intro">${e(c.founder.intro)}</p><p>${e(c.founder.bio)}</p><p>${e(c.founder.vision)}</p><div class="founder-credentials"><span>${e(c.founder.credentialOne)}</span><span>${e(c.founder.credentialTwo)}</span><span>${e(c.founder.credentialThree)}</span></div>${showLink ? '<a class="text-link" href="/histoire">Notre histoire <span>↗</span></a>' : ''}</div></div></section>`;
+const founderSection = (c, showLink = true) => `<section class="section founder-section"><div class="container founder-grid"><figure class="founder-portrait reveal"><span class="founder-photo-tag" aria-hidden="true">CHECKME / GRENOBLE</span><img src="/checkme-demo/assets/guillaume-richalet-portrait.jpg" alt="Portrait du Dr Guillaume Richalet" loading="lazy" width="1536" height="2048"><figcaption>${e(c.founder.portraitCredit)}</figcaption></figure><div class="founder-copy reveal"><p class="eyebrow"><span class="eyebrow-line"></span>${e(c.founder.eyebrow)}</p><h2>${e(c.founder.title)}</h2><p class="founder-intro">${e(c.founder.intro)}</p><p>${e(c.founder.bio)}</p><p>${e(c.founder.vision)}</p><div class="founder-credentials"><span>${e(c.founder.credentialOne)}</span><span>${e(c.founder.credentialTwo)}</span><span>${e(c.founder.credentialThree)}</span></div>${showLink ? '<a class="text-link" href="/histoire">Notre histoire <span>↗</span></a>' : ''}</div></div></section>`;
 
 function home(c) {
   const heroTitle = design === 'editorial' ? e(c.home.title) : e(c.home.title).replace('. ', '.<br> ');
@@ -58,7 +57,6 @@ function render() {
   document.querySelectorAll('a[href^="/"]').forEach(link => {
     if (link.getAttribute('href') === '/admin') return;
     const url = new URL(link.href); if (!url.pathname.startsWith('/checkme-demo/')) url.pathname = siteHref(url.pathname);
-    if (design !== 'editorial' && !url.searchParams.has('design')) url.searchParams.set('design', design);
     if (editMode) url.searchParams.set('edit', '1');
     link.href = `${url.pathname}${url.search}`;
   });
